@@ -1,0 +1,28 @@
+{% extends 'sender/base.html' %}
+{% load static %}
+{% block content %}
+  <div class="container">
+    <form action="" method="POST" class="contact-form">
+      {% csrf_token %}
+      <div class="form-control">
+        <div class="tag">Full Name</div>
+        <input type="text" name="full-name">
+      </div>
+      <div class="form-control">
+        <div class="tag">Email</div>
+        <input type="text" name="email">
+      </div>
+      <div class="form-control">
+        <div class="tag">Subject</div>
+        <input type="text" name="subject">
+      </div>
+      <div class="form-control">
+        <div class="tag">Message</div>
+        <textarea style="width:100%; height:250px;" name="message"></textarea>
+      </div>
+      <div class="form-control">
+        <input type="Submit" class="btn submit-btn" value="Send">
+      </div>
+    </form>
+  </div>
+{% endblock %}

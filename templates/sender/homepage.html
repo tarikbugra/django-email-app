@@ -1,0 +1,12 @@
+{% extends 'sender/base.html' %}
+{% block content %}
+<div class="container">
+    <div class="noproject-wrapper center">
+        <h3 class="grey-text">May you want to send an email?</h3>
+        <a href="{% url 'send' %}" class="btn-large grey">
+            <i class="material-icons white-text left">add_circle</i>
+            <span class="bold">Send an email</span>
+        </a>
+    </div>
+</div>
+{% endblock %}
